@@ -13,14 +13,6 @@ public class highScoreWins {
                 "Enter game score: ");
         String gameScore = input.nextLine();
 
-//        String[] tokens = gameScore.split(Pattern.quote("|"));
-//
-//        String[] teams = tokens[0].split(Pattern.quote(":"));
-//        String[] teamScore = tokens[1].split(Pattern.quote(":"));
-
-//        int homeTeamScore = Integer.parseInt(teamScore[0]);
-//        int visitorTeamScore = Integer.parseInt(teamScore[1]);
-
         int homeTeamScore = returnHomeScore(gameScore);
         int visitorTeamScore = returnVisitorScore(gameScore);
 
@@ -39,10 +31,7 @@ public class highScoreWins {
 
         String[] tokens = gameScore.split(Pattern.quote("|"));
 
-        //String[] teams = tokens[0].split(Pattern.quote(":"));
         String[] teamScore = tokens[1].split(Pattern.quote(":"));
-
-        //int visitorTeamScore = Integer.parseInt(teamScore[1]);
 
         return Integer.parseInt(teamScore[0]);
 
@@ -51,10 +40,7 @@ public class highScoreWins {
 
         String[] tokens = gameScore.split(Pattern.quote("|"));
 
-        //String[] teams = tokens[0].split(Pattern.quote(":"));
         String[] teamScore = tokens[1].split(Pattern.quote(":"));
-
-        //int visitorTeamScore = Integer.parseInt(teamScore[1]);
 
         return Integer.parseInt(teamScore[1]);
     }
@@ -63,10 +49,6 @@ public class highScoreWins {
         String[] tokens = gameScore.split(Pattern.quote("|"));
 
         String[] teams = tokens[0].split(Pattern.quote(":"));
-        //String[] teamScore = tokens[1].split(Pattern.quote(":"));
-
-        //int homeTeam = Integer.parseInt(teams[0]);
-        //int visitorTeam = Integer.parseInt(teams[1]);
 
         return teams[0];
     }
@@ -75,10 +57,6 @@ public class highScoreWins {
         String[] tokens = gameScore.split(Pattern.quote("|"));
 
         String[] teams = tokens[0].split(Pattern.quote(":"));
-        //String[] teamScore = tokens[1].split(Pattern.quote(":"));
-
-        //int homeTeam = Integer.parseInt(teams[0]);
-        //int visitorTeam = Integer.parseInt(teams[1]);
 
         return teams[1];
     }
