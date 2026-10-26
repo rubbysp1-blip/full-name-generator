@@ -43,7 +43,7 @@ public class FullNameApplication {
             fullName += " " + lastName1;
         }
         if(!suffix.isEmpty()){
-            fullName += " " + suffix1;
+            fullName += ", " + suffix1;
         }
 
         System.out.print("Full Name: " + fullName);
